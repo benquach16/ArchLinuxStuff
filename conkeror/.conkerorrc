@@ -1,0 +1,10 @@
+
+require("clicks-in-new-buffer.js");
+require("new-tabs.js");
+clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
+clicks_in_new_buffer_button = 1; //  midclick links in new buffers with
+//theme_load("mono");
+theme_load("zenburn");
+session_pref("xpinstall.whitelist.required", false);
+url_completion_use_history = true;
+session_pref('browser.history_expire_days', 1);
