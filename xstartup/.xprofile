@@ -1,0 +1,4 @@
+
+conky &
+compton -c -o 0.6 -r 18 &
+feh --bg-scale Desktop/1419567641876.jpg
