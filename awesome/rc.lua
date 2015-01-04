@@ -9,7 +9,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
-local menubar = require("menubar")
+-- local menubar = require("menubar")
 
  
 -- {{{ Error handling
@@ -106,7 +106,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
 -- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+-- menubar.utils.terminal = gnome-terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- {{{ Wibox
@@ -273,8 +273,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
-)
+awful.key({modkey }, "p", function() awful.util.spawn( "dmenu_run" ) end)
+	)
 
 clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
