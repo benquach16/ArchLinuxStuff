@@ -19,7 +19,7 @@ theme.font      = "Fixed Regular 9"
 theme.fg_normal  = "#d3d7cf"
 theme.fg_focus   = "#d3d7cf"
 theme.fg_urgent  = "#d3d7cf"
-theme.bg_normal  = "#2e3436"
+theme.bg_normal  = "#262626"
 theme.bg_focus   = "#3e4446"
 theme.bg_urgent  = "#3e4446"
 theme.bg_systray = theme.bg_normal
@@ -28,7 +28,7 @@ theme.bg_systray = theme.bg_normal
 -- {{{ Borders
 theme.border_width  = 2
 theme.border_normal = "#262626"
-theme.border_focus  = "#262626"
+theme.border_focus  = "#3e4446"
 theme.border_marked = "#262626"
 -- }}}
 
@@ -123,5 +123,6 @@ theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/zen
 theme.titlebar_maximized_button_normal_inactive = "/usr/share/awesome/themes/zenburn/titlebar/maximized_normal_inactive.png"
 -- }}}
 -- }}}
+theme.tasklist_disable_icon = true
 
 return theme
