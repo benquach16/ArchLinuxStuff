@@ -8,8 +8,8 @@ own_window_hints undecorated below sticky skip_taskbar skip_pager
 double_buffer yes
 cpu_avg_samples 2
 net_avg_samples 2
-use_xft no
-xftfont Fixed:size=9
+use_xft yes
+xftfont Fixed:size=8
 update_interval 0.1
 minimum_size 1920 12
 maximum_width 1920
