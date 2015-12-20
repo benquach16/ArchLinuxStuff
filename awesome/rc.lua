@@ -10,7 +10,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 -- local menubar = require("menubar")
-
+local lain = require("lain")
  
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -44,8 +44,8 @@ beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "urxvt"
+editor = os.getenv("EDITOR") or "emacs"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -69,7 +69,10 @@ local layouts =
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+	lain.layout.uselesstile,
+	lain.layout.uselesspiral,
+	lain.layout.uselessfair
 }
 -- }}}
 
@@ -233,7 +236,7 @@ globalkeys = awful.util.table.join(
             awful.client.focus.byidx( 1)
             if client.focus then client.focus:raise() end
         end),
-    awful.key({ modkey,           }, "k",
+    awful.key({ modkey,  "x"         }, "o",
         function ()
             awful.client.focus.byidx(-1)
             if client.focus then client.focus:raise() end
