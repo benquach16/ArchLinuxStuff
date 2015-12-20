@@ -27,3 +27,8 @@ Configuration for conky
 XStartup
 ==============
 Initialization scripts for my XServer
+
+
+KeySnail
+==============
+Config file for my keysnail firefox plugin
