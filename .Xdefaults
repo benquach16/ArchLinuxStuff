@@ -44,7 +44,7 @@ xterm*foreground:#6CF67C
 	URxvt*saveLines:32767
 	URxvt*troughColor:#000000
 	URxvt*scrollColor:#222222
-	URxvt*font: xft:Fixed:pixelsize=13
+	URxvt*font: xft:Misc Fixed:pixelsize=13
 xterm*faceName: Fixed
 xterm*faceSize: 10
 	# with this set to true, when an app sends a bell to the terminal, awesome hilights the appropriate tag(s) ;)
