@@ -10,7 +10,6 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 -- local menubar = require("menubar")
-local lain = require("lain")
  
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -40,7 +39,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
-
+beautiful.useless_gap=10
 
 
 -- This is used later as the default terminal and editor to run.
@@ -70,9 +69,7 @@ local layouts =
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier,
-	lain.layout.uselesstile,
-	lain.layout.uselesspiral,
-	lain.layout.uselessfair
+
 }
 -- }}}
 
@@ -196,7 +193,7 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
-    --right_layout:add(mylayoutbox[s])
+	right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
@@ -296,7 +293,16 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+	  awful.key({ modkey, "Shift" }, "m",
+	function (c)
+	  c.maximized = false
+	  c.maximized_vertical=false
+	  c.maximized_horizontal=false
+	  c:raise()
+	end ,
+	{description = "demaximize", group = "client"})
+	
 )
 
 -- Bind all key numbers to tags.
