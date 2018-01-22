@@ -13,7 +13,7 @@ theme.wallpaper = "~/Desktop/1419567641876.jpg"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Fixed Regular 9"
+theme.font      = "Misc Fixed 9"
 
 -- {{{ Colors
 theme.fg_normal  = "#d3d7cf"
