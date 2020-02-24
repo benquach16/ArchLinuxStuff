@@ -9,11 +9,11 @@
 -- {{{ Main
 theme = {}
 --theme.wallpaper = "/usr/share/awesome/themes/zenburn/zenburn-background.png"
-theme.wallpaper = "~/Desktop/1419567641876.jpg"
+theme.wallpaper = "~/Desktop/wall.jpg"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Misc Fixed 9"
+theme.font      = "Fixed 9"
 
 -- {{{ Colors
 theme.fg_normal  = "#d3d7cf"
